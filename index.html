@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud system</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="container">
+    <div class="form-floating mb-3">
+        <input type="text" oninput="validationProduct(this)" class="form-control" id="ProductName" placeholder="name@example.com">
+
+        <div class="alert alert-danger my-1 d-none" role="alert">
+       User Name Must contain Uppercase
+        </div>
+
+
+        <label for="ProductName">Product Name</label>
+        
+      </div>
+    <div class="form-floating mb-3">
+        <input type="text" oninput="validationProduct(this)" class="form-control" id="ProductPrice" placeholder="name@example.com">
+        <label for="ProductPrice">Product Price</label>
+      </div>
+    <div class="form-floating mb-3">
+        <input type="text" oninput="validationProduct(this)" class="form-control" id="ProductDes" placeholder="name@example.com">
+        <label for="ProductDes">Product Des</label>
+      </div>
+    <div class="form-floating mb-3">
+        <input list="product" oninput="validationProduct(this)" type="text" class="form-control" id="ProductCategory" placeholder="name@example.com">
+        <label for="ProductCategory">Product Category</label>
+      </div>
+    
+
+
+<datalist id="product">
+<option value="TV">
+<option value="Laptop">
+<option value="Mobile">
+<option value="Screen">
+</datalist>
+
+
+
+
+    <div class="form-floating mb-3">
+        <input type="file" accept="image/*" multiple class="form-control" id="ProductImg" placeholder="name@example.com">
+        <label for="ProductImg">Product Img</label>
+      </div>
+
+
+      <button onclick="addProduct()" class="bg-dark text-white p-3 rounded">Add Product</button>
+
+      <div class="form-floating mb-3">
+        <input oninput="searchproduct()" type="text" class="form-control mt-5" id="searchproduct" placeholder="name@example.com">
+        <label for="searchproduct">search a product</label>
+      </div>
+</div>
+   
+<div class="container mt-5">
+  <div class="row" id="demo">
+    
+  </div>
+</div> 
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
